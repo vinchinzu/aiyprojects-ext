@@ -13,21 +13,19 @@ import textwrap
 import traceback
 import time
 import datetime
-import aiy.audio  # noqa
+import aiy.audio 
 from aiy._drivers._hat import get_aiy_device_name
-
 
 RECORD_DURATION_SECONDS = 3
 
-def check_mic_works():
-    """Check the microphone records correctly."""
+def record():
     temp_file, temp_path = tempfile.mkstemp(suffix='.wav')
     os.close(temp_file)
     ts = int(time.time())
     file = str(ts) + ".wav"
     
     try:
-        #input("When you're ready, press enter and say 'Testing, 1 2 3'...")
+        input("When you're ready, press enter and say a phrase ...")
         print('Recording...')
         #aiy.audio.record_to_wave(temp_path, RECORD_DURATION_SECONDS)
         aiy.audio.record_to_wave(file, RECORD_DURATION_SECONDS)
@@ -42,7 +40,6 @@ def check_mic_works():
             pass
 
     return ask('Did you hear your own voice?')
-
 
 
 
@@ -61,14 +58,14 @@ def ask(prompt):
 
 def main():
 
-    check_mic_works()
+    record()
 
 
 if __name__ == '__main__':
     try:
         main()
         input('Press Enter to close...')
-    except Exception:  # pylint: disable=W0703
+    except Exception: 
         traceback.print_exc()
         input('Press Enter to close...')
 

@@ -2,20 +2,17 @@
 
 import aiy.audio  
 import aiy.voicehat
-import aiy.cloudspeech
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import random
 
-foo = ['Ciao bello', 'Buon Giorno', 'come stai ragazzo?', 'uno, due, tre, quattro, cinque, sei', 'che vuoi fare oggi?', 'cinque, sei, sette, otto','sopra la panca la capra campa, sotto la panca la capra crepa',
-     'sai parlare Italiano?', 'hey Maambo, Maambo Italiano', 'Miinchia, bravo',
+foo = ['Ciao bello, Buon Giorno', 'come stai ragazzo?', 'uno, due, tre, quattro, cinque, sei, sette, otto, nove, dieci', 'che vuoi fare oggi?', 'cinque, sei, sette, otto','sopra la panca la capra campa, sotto la panca la capra crepa',
+     'sai parlare Itaaliano?', 'hey Maambo, Maambo Italiano', 'Miinchia, braavo',
       'Sopra la panca la capra campa, sotto la panca la capra crepa', 'Michele aveva un gallo, bianco rosso e verde e giallo, e per farlo ben cantare, gli dava da mangiare']
 
 
 button = aiy.voicehat.get_button()
 led = aiy.voicehat.get_led()
-
-TEST_SOUND_PATH = '/usr/share/sounds/alsa/Front_Center.wav'
 
 #path to wave file
 path2 = '/home/pi/audio/1523749823.wav'
@@ -36,6 +33,7 @@ while True:
 	button.wait_for_press()
 	led.set_state(aiy.voicehat.LED.ON)
 	say(random.choice(foo))
+	led.set_state(aiy.voicehat.LED.OFF)
 
 
 

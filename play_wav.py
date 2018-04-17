@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import aiy.audio  
 import aiy.voicehat
 import aiy.cloudspeech

@@ -1,3 +1,8 @@
+# Record wave file and play it back, timestamping and saving into directory
+#TODO
+# Add new folder for audio outside of git,
+# clean imports
+
 import fileinput
 import os
 import re

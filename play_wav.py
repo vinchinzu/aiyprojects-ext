@@ -8,7 +8,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import random
 
 foo = ['Ciao bello', 'Buon Giorno', 'come stai ragazzo?', 'uno, due, tre, quattro, cinque, sei', 'che vuoi fare oggi?', 'cinque, sei, sette, otto','sopra la panca la capra campa, sotto la panca la capra crepa',
-     'sai parlare italiano', 'hey mambo, mambo italiano', 'minchia, bravo']
+     'sai parlare Italiano?', 'hey Maambo, Maambo Italiano', 'Miinchia, bravo',
+      'Sopra la panca la capra campa, sotto la panca la capra crepa', 'Michele aveva un gallo, bianco rosso e verde e giallo, e per farlo ben cantare, gli dava da mangiare']
 
 
 button = aiy.voicehat.get_button()

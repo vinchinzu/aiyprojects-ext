@@ -67,7 +67,7 @@ def main():
                 annotator.update()
                 print('Iteration #%d: num_faces=%d' % (i, len(faces)))
                 #write to file
-                F = open(“../wwww/check_faces.txt”,”w”)
+                F = open('../wwww/check_faces.txt','w')
                 F.write(len(faces))
                 F.close
               

@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 
 import threading
@@ -25,10 +26,11 @@ def main():
              print('num_faces=%d' % number)
              time.sleep(1)
         print('Got a face.')
-        task = threading.Thread(target=play_mambo)
-        threads.append(task)
-        task.start()
-        
+        aiy.audio.say("Hello there", volume=20)
+       # task = threading.Thread(target=play_mambo)
+       # threads.append(task)
+       # task.start()
+        time.sleep(30)
         #text = recognizer.recognize()
         #if text is None:
         #    print('Sorry, I did not hear you.')

@@ -8,7 +8,8 @@ import random
 
 phrase_list = ['Ciao bello, Buon Giorno', 'come stai ragazzo?', 'uno, due, tre, quattro, cinque, sei, sette, otto, nove, dieci', 'che vuoi fare oggi?', 'cinque, sei, sette, otto','sopra la panca la capra campa, sotto la panca la capra crepa',
      'sai parlare Itaaliano?', 'heeeey Maambo, Maambo Itaaaliano', 'Miinchia, braavo',
-      'Sopra la panca la capra campa, sotto la panca la capra crepa', 'Michele aveva un gallo, bianco rosso e verde e giallo, e per farlo ben cantare, gli dava da mangiare']
+      'Sopra la panca la capra campa, sotto la panca la capra crepa', 'Michele aveva un gallo, bianco rosso e verde e giallo, e per farlo ben cantare, gli dava da mangiare',
+	      'Certo']
 
 button = aiy.voicehat.get_button()
 led = aiy.voicehat.get_led()
@@ -20,7 +21,7 @@ def say_italian(words):
 while True:
 	button.wait_for_press()
 	led.set_state(aiy.voicehat.LED.ON)
-	aiy.audio.say(random.choice(phrase_list))
+	say_italian(random.choice(phrase_list))
 	led.set_state(aiy.voicehat.LED.OFF)
 
 

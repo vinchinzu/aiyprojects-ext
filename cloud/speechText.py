@@ -14,6 +14,8 @@ file_name = os.path.join(
     os.path.dirname(__file__),
     'output.mp3')
 
+print(file_name)
+
 # Loads the audio into memory
 with io.open(file_name, 'rb') as audio_file:
     content = audio_file.read()

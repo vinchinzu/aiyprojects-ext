@@ -5,7 +5,6 @@ import aiy.voicehat
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import random
-GPIO.setwarnings(False)
 
 phrase_list = ['Ciao bello, Buon Giorno', 'come stai ragazzo?', 'uno, due, tre, quattro, cinque, sei, sette, otto, nove, dieci', 'che vuoi fare oggi?', 'cinque, sei, sette, otto','sopra la panca la capra campa, sotto la panca la capra crepa',
      'sai parlare Itaaliano?', 'heeeey Maambo, Maambo Itaaaliano', 'Miinchia, braavo',

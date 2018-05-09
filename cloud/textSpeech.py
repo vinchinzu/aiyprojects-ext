@@ -22,4 +22,4 @@ def synthesize_text(text):
         print('Audio content written to file "output.mp3"')
         
         
-syntesize_text("Hello World")
+synthesize_text("Hello World")

@@ -29,5 +29,8 @@ config = types.RecognitionConfig(
 # Detects speech in the audio file
 response = client.recognize(config, audio)
 
+print(response)
+
+
 for result in response.results:
     print('Transcript: {}'.format(result.alternatives[0].transcript))

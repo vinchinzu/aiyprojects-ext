@@ -12,7 +12,7 @@ client = speech.SpeechClient()
 # The name of the audio file to transcribe
 file_name = os.path.join(
     os.path.dirname(__file__),
-    'output.raw')
+    'output.mp3')
 
 print(file_name)
 
